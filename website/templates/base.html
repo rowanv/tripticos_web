@@ -534,7 +534,9 @@
                 <div class="section-heading inverse scrollpoint sp-effect3">
                     <h1>Get App</h1>
                     <div class="divider"></div>
+                    {% block choose_platform %}
                     <p>Choose your native platform and get started!</p>
+                    {% endblock %}
                 </div>
 
                 <div class="row">
@@ -543,7 +545,8 @@
                             <img src="{% static 'img/eco/eco-angled2.png' %}" alt="">
                         </div>
                         <div class="platforms">
-                            <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
+                            {% block app_download_buttons %}
+                            <!--a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
                                 <i class="fa fa-android fa-3x pull-left"></i>
                                 <span>Download for</span><br>
                                 <b>Android</b>
@@ -553,7 +556,8 @@
                                     <i class="fa fa-apple fa-3x pull-left"></i>
                                     <span>Download for</span><br>
                                     <b>Apple IOS</b>
-                                </a>
+                                </a-->
+                            {% endblock %}
                         </div>
 
                     </div>
@@ -570,54 +574,15 @@
                     <h1>Contact Us</h1>
                     <div class="divider"></div>
                     <p>For more info and support, contact us!</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your email">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                                </form>
-                            </div>
-                            <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
-                                <div class="media">
-                                    <a class="pull-left" href="#" >
-                                        <i class="fa fa-map-marker fa-2x"></i>
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">4, Some street, California, USA</h4>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <a class="pull-left" href="#" >
-                                        <i class="fa fa-envelope fa-2x"></i>
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">
-                                            <a href="mailto:support@oleose.com">support@oleose.com</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <a class="pull-left" href="#" >
-                                        <i class="fa fa-phone fa-2x"></i>
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">+1 234 567890</h4>
-                                    </div>
-                                </div>
-                            </div>
+
+                    <div class='row'>
+                        <h4>
+                            <a href="#" >
+                                <i class="fa fa-envelope fa-2x"> </i>
+                            </a>
+                                <a href="#"> {% block mailto %}{% endblock %}</a>
+                            </h4>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -628,9 +593,9 @@
                     <img src="{% static 'img/eco/logo.png' %}" alt="" class="logo">
                 </a>
                 <div class="social">
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    <!--a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
                     <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a-->
                 </div>
                 <div class="rights">
                     <p>Copyright &copy; Horos Solutions 2015</p>
